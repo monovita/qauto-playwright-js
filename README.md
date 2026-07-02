@@ -56,10 +56,9 @@ qauto-playwright-js
 
 ## Tests
 
-The tests, located in `tests/`, aim to verify the complete functionality of the application. They cover scenarios such as user authentication, navigation, and interactions with different pages. 
+The tests, located in `tests/`, aim to verify the complete functionality of the application. They cover scenarios such as user authentication, navigation, and interactions with different pages.
 
 Check all scenarios [here](/tests.md).
-
 
 ## Page Objects and Componentization
 
@@ -69,7 +68,7 @@ Example of a Page Object (`registrationForm.js`):
 
 ```javascript
 export class RegistrationForm extends BasePage {
-    // Implementation of page interactions
+	// Implementation of page interactions
 }
 ```
 
@@ -78,7 +77,6 @@ The project also incorporates a `helpers/Elements/` directory to house reusable 
 ## Fixtures and Data
 
 Data used in tests is organized under the `helpers/fixtures/` directory. This includes a `userGaragePage.js` file for defining data models.
-
 
 ## State Maintenance
 

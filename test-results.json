@@ -1,231 +1,227 @@
 {
-  "config": {
-    "argv": [
-      "/usr/local/bin/node",
-      "/Users/amedelian/Downloads/qauto-playwright-js/node_modules/.bin/playwright",
-      "test",
-      "--ui"
-    ],
-    "configFile": "/Users/amedelian/Downloads/qauto-playwright-js/playwright.config.js",
-    "rootDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-    "failOnFlakyTests": false,
-    "forbidOnly": false,
-    "fullyParallel": true,
-    "globalSetup": null,
-    "globalTeardown": null,
-    "globalTimeout": 0,
-    "grep": {},
-    "grepInvert": null,
-    "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 1
-    },
-    "preserveOutput": "always",
-    "projects": [
-      {
-        "outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "setup",
-        "name": "setup",
-        "testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "/auth\\.setup\\.js/"
-        ],
-        "timeout": 60000
-      },
-      {
-        "outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "login-tests",
-        "name": "login-tests",
-        "testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "/logInPositiveTests\\.spec\\.js/",
-          "/logInNegativeTests\\.spec\\.js/",
-          "/registrationPositiveTests\\.spec\\.js/",
-          "/registrationNegativeTests\\.spec\\.js/"
-        ],
-        "timeout": 60000
-      },
-      {
-        "outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "chromium",
-        "name": "chromium",
-        "testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-        "testIgnore": [
-          "/logInPositiveTests\\.spec\\.js/",
-          "/logInNegativeTests\\.spec\\.js/",
-          "/registrationPositiveTests\\.spec\\.js/",
-          "/registrationNegativeTests\\.spec\\.js/"
-        ],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 60000
-      }
-    ],
-    "quiet": false,
-    "reporter": [
-      [
-        "html",
-        {
-          "open": "always"
-        }
-      ],
-      [
-        "list",
-        {
-          "printSteps": true
-        }
-      ],
-      [
-        "json",
-        {
-          "outputFile": "test-results.json"
-        }
-      ]
-    ],
-    "reportSlowTests": {
-      "max": 5,
-      "threshold": 300000
-    },
-    "shard": null,
-    "tags": [],
-    "updateSnapshots": "missing",
-    "updateSourceMethod": "patch",
-    "version": "1.61.1",
-    "workers": 5,
-    "webServer": null
-  },
-  "suites": [
-    {
-      "title": "auth.setup.js",
-      "file": "auth.setup.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "authenticate",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "setup",
-              "projectName": "setup",
-              "results": [
-                {
-                  "workerIndex": 24,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2947,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-02T12:58:12.053Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/auth.setup.js-authenticate-setup/trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
-          "file": "auth.setup.js",
-          "line": 6,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "api/profileTestAPI.spec.js",
-      "file": "api/profileTestAPI.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "API -- Profile page",
-          "file": "api/profileTestAPI.spec.js",
-          "line": 3,
-          "column": 6,
-          "specs": [
-            {
-              "title": "User Profile is modified",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 25,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 868,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-02T12:58:15.496Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-profileTestAPI-API-----bc61f-ge-User-Profile-is-modified-chromium/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d68de25d6a2c5ac3d635-d8a335d430da73180a1c",
-              "file": "api/profileTestAPI.spec.js",
-              "line": 4,
-              "column": 3
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "errors": [],
-  "stats": {
-    "startTime": "2026-07-02T12:58:11.634Z",
-    "duration": 4856.333000000101,
-    "expected": 2,
-    "skipped": 0,
-    "unexpected": 0,
-    "flaky": 0
-  }
+	"config": {
+		"argv": [
+			"/usr/local/bin/node",
+			"/Users/amedelian/Downloads/qauto-playwright-js/node_modules/.bin/playwright",
+			"test",
+			"--ui"
+		],
+		"configFile": "/Users/amedelian/Downloads/qauto-playwright-js/playwright.config.js",
+		"rootDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+		"failOnFlakyTests": false,
+		"forbidOnly": false,
+		"fullyParallel": true,
+		"globalSetup": null,
+		"globalTeardown": null,
+		"globalTimeout": 0,
+		"grep": {},
+		"grepInvert": null,
+		"maxFailures": 0,
+		"metadata": {
+			"actualWorkers": 1
+		},
+		"preserveOutput": "always",
+		"projects": [
+			{
+				"outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
+				"repeatEach": 1,
+				"retries": 0,
+				"metadata": {
+					"actualWorkers": 1
+				},
+				"id": "setup",
+				"name": "setup",
+				"testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+				"testIgnore": [],
+				"testMatch": ["/auth\\.setup\\.js/"],
+				"timeout": 60000
+			},
+			{
+				"outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
+				"repeatEach": 1,
+				"retries": 0,
+				"metadata": {
+					"actualWorkers": 1
+				},
+				"id": "login-tests",
+				"name": "login-tests",
+				"testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+				"testIgnore": [],
+				"testMatch": [
+					"/logInPositiveTests\\.spec\\.js/",
+					"/logInNegativeTests\\.spec\\.js/",
+					"/registrationPositiveTests\\.spec\\.js/",
+					"/registrationNegativeTests\\.spec\\.js/"
+				],
+				"timeout": 60000
+			},
+			{
+				"outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
+				"repeatEach": 1,
+				"retries": 0,
+				"metadata": {
+					"actualWorkers": 1
+				},
+				"id": "chromium",
+				"name": "chromium",
+				"testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+				"testIgnore": [
+					"/logInPositiveTests\\.spec\\.js/",
+					"/logInNegativeTests\\.spec\\.js/",
+					"/registrationPositiveTests\\.spec\\.js/",
+					"/registrationNegativeTests\\.spec\\.js/"
+				],
+				"testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+				"timeout": 60000
+			}
+		],
+		"quiet": false,
+		"reporter": [
+			[
+				"html",
+				{
+					"open": "always"
+				}
+			],
+			[
+				"list",
+				{
+					"printSteps": true
+				}
+			],
+			[
+				"json",
+				{
+					"outputFile": "test-results.json"
+				}
+			]
+		],
+		"reportSlowTests": {
+			"max": 5,
+			"threshold": 300000
+		},
+		"shard": null,
+		"tags": [],
+		"updateSnapshots": "missing",
+		"updateSourceMethod": "patch",
+		"version": "1.61.1",
+		"workers": 5,
+		"webServer": null
+	},
+	"suites": [
+		{
+			"title": "auth.setup.js",
+			"file": "auth.setup.js",
+			"column": 0,
+			"line": 0,
+			"specs": [
+				{
+					"title": "authenticate",
+					"ok": true,
+					"tags": [],
+					"tests": [
+						{
+							"timeout": 60000,
+							"annotations": [],
+							"expectedStatus": "passed",
+							"projectId": "setup",
+							"projectName": "setup",
+							"results": [
+								{
+									"workerIndex": 24,
+									"parallelIndex": 0,
+									"status": "passed",
+									"duration": 2947,
+									"errors": [],
+									"stdout": [],
+									"stderr": [],
+									"retry": 0,
+									"startTime": "2026-07-02T12:58:12.053Z",
+									"annotations": [],
+									"attachments": [
+										{
+											"name": "trace",
+											"contentType": "application/zip",
+											"path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/auth.setup.js-authenticate-setup/trace.zip"
+										}
+									]
+								}
+							],
+							"status": "expected"
+						}
+					],
+					"id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+					"file": "auth.setup.js",
+					"line": 6,
+					"column": 1
+				}
+			]
+		},
+		{
+			"title": "api/profileTestAPI.spec.js",
+			"file": "api/profileTestAPI.spec.js",
+			"column": 0,
+			"line": 0,
+			"specs": [],
+			"suites": [
+				{
+					"title": "API -- Profile page",
+					"file": "api/profileTestAPI.spec.js",
+					"line": 3,
+					"column": 6,
+					"specs": [
+						{
+							"title": "User Profile is modified",
+							"ok": true,
+							"tags": [],
+							"tests": [
+								{
+									"timeout": 60000,
+									"annotations": [],
+									"expectedStatus": "passed",
+									"projectId": "chromium",
+									"projectName": "chromium",
+									"results": [
+										{
+											"workerIndex": 25,
+											"parallelIndex": 0,
+											"status": "passed",
+											"duration": 868,
+											"errors": [],
+											"stdout": [],
+											"stderr": [],
+											"retry": 0,
+											"startTime": "2026-07-02T12:58:15.496Z",
+											"annotations": [],
+											"attachments": [
+												{
+													"name": "trace",
+													"contentType": "application/zip",
+													"path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-profileTestAPI-API-----bc61f-ge-User-Profile-is-modified-chromium/trace.zip"
+												}
+											]
+										}
+									],
+									"status": "expected"
+								}
+							],
+							"id": "d68de25d6a2c5ac3d635-d8a335d430da73180a1c",
+							"file": "api/profileTestAPI.spec.js",
+							"line": 4,
+							"column": 3
+						}
+					]
+				}
+			]
+		}
+	],
+	"errors": [],
+	"stats": {
+		"startTime": "2026-07-02T12:58:11.634Z",
+		"duration": 4856.333000000101,
+		"expected": 2,
+		"skipped": 0,
+		"unexpected": 0,
+		"flaky": 0
+	}
 }
