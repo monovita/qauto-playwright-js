@@ -1,227 +1,1167 @@
 {
-	"config": {
-		"argv": [
-			"/usr/local/bin/node",
-			"/Users/amedelian/Downloads/qauto-playwright-js/node_modules/.bin/playwright",
-			"test",
-			"--ui"
-		],
-		"configFile": "/Users/amedelian/Downloads/qauto-playwright-js/playwright.config.js",
-		"rootDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-		"failOnFlakyTests": false,
-		"forbidOnly": false,
-		"fullyParallel": true,
-		"globalSetup": null,
-		"globalTeardown": null,
-		"globalTimeout": 0,
-		"grep": {},
-		"grepInvert": null,
-		"maxFailures": 0,
-		"metadata": {
-			"actualWorkers": 1
-		},
-		"preserveOutput": "always",
-		"projects": [
-			{
-				"outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
-				"repeatEach": 1,
-				"retries": 0,
-				"metadata": {
-					"actualWorkers": 1
-				},
-				"id": "setup",
-				"name": "setup",
-				"testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-				"testIgnore": [],
-				"testMatch": ["/auth\\.setup\\.js/"],
-				"timeout": 60000
-			},
-			{
-				"outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
-				"repeatEach": 1,
-				"retries": 0,
-				"metadata": {
-					"actualWorkers": 1
-				},
-				"id": "login-tests",
-				"name": "login-tests",
-				"testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-				"testIgnore": [],
-				"testMatch": [
-					"/logInPositiveTests\\.spec\\.js/",
-					"/logInNegativeTests\\.spec\\.js/",
-					"/registrationPositiveTests\\.spec\\.js/",
-					"/registrationNegativeTests\\.spec\\.js/"
-				],
-				"timeout": 60000
-			},
-			{
-				"outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
-				"repeatEach": 1,
-				"retries": 0,
-				"metadata": {
-					"actualWorkers": 1
-				},
-				"id": "chromium",
-				"name": "chromium",
-				"testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
-				"testIgnore": [
-					"/logInPositiveTests\\.spec\\.js/",
-					"/logInNegativeTests\\.spec\\.js/",
-					"/registrationPositiveTests\\.spec\\.js/",
-					"/registrationNegativeTests\\.spec\\.js/"
-				],
-				"testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
-				"timeout": 60000
-			}
-		],
-		"quiet": false,
-		"reporter": [
-			[
-				"html",
-				{
-					"open": "always"
-				}
-			],
-			[
-				"list",
-				{
-					"printSteps": true
-				}
-			],
-			[
-				"json",
-				{
-					"outputFile": "test-results.json"
-				}
-			]
-		],
-		"reportSlowTests": {
-			"max": 5,
-			"threshold": 300000
-		},
-		"shard": null,
-		"tags": [],
-		"updateSnapshots": "missing",
-		"updateSourceMethod": "patch",
-		"version": "1.61.1",
-		"workers": 5,
-		"webServer": null
-	},
-	"suites": [
-		{
-			"title": "auth.setup.js",
-			"file": "auth.setup.js",
-			"column": 0,
-			"line": 0,
-			"specs": [
-				{
-					"title": "authenticate",
-					"ok": true,
-					"tags": [],
-					"tests": [
-						{
-							"timeout": 60000,
-							"annotations": [],
-							"expectedStatus": "passed",
-							"projectId": "setup",
-							"projectName": "setup",
-							"results": [
-								{
-									"workerIndex": 24,
-									"parallelIndex": 0,
-									"status": "passed",
-									"duration": 2947,
-									"errors": [],
-									"stdout": [],
-									"stderr": [],
-									"retry": 0,
-									"startTime": "2026-07-02T12:58:12.053Z",
-									"annotations": [],
-									"attachments": [
-										{
-											"name": "trace",
-											"contentType": "application/zip",
-											"path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/auth.setup.js-authenticate-setup/trace.zip"
-										}
-									]
-								}
-							],
-							"status": "expected"
-						}
-					],
-					"id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
-					"file": "auth.setup.js",
-					"line": 6,
-					"column": 1
-				}
-			]
-		},
-		{
-			"title": "api/profileTestAPI.spec.js",
-			"file": "api/profileTestAPI.spec.js",
-			"column": 0,
-			"line": 0,
-			"specs": [],
-			"suites": [
-				{
-					"title": "API -- Profile page",
-					"file": "api/profileTestAPI.spec.js",
-					"line": 3,
-					"column": 6,
-					"specs": [
-						{
-							"title": "User Profile is modified",
-							"ok": true,
-							"tags": [],
-							"tests": [
-								{
-									"timeout": 60000,
-									"annotations": [],
-									"expectedStatus": "passed",
-									"projectId": "chromium",
-									"projectName": "chromium",
-									"results": [
-										{
-											"workerIndex": 25,
-											"parallelIndex": 0,
-											"status": "passed",
-											"duration": 868,
-											"errors": [],
-											"stdout": [],
-											"stderr": [],
-											"retry": 0,
-											"startTime": "2026-07-02T12:58:15.496Z",
-											"annotations": [],
-											"attachments": [
-												{
-													"name": "trace",
-													"contentType": "application/zip",
-													"path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-profileTestAPI-API-----bc61f-ge-User-Profile-is-modified-chromium/trace.zip"
-												}
-											]
-										}
-									],
-									"status": "expected"
-								}
-							],
-							"id": "d68de25d6a2c5ac3d635-d8a335d430da73180a1c",
-							"file": "api/profileTestAPI.spec.js",
-							"line": 4,
-							"column": 3
-						}
-					]
-				}
-			]
-		}
-	],
-	"errors": [],
-	"stats": {
-		"startTime": "2026-07-02T12:58:11.634Z",
-		"duration": 4856.333000000101,
-		"expected": 2,
-		"skipped": 0,
-		"unexpected": 0,
-		"flaky": 0
-	}
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/amedelian/Downloads/qauto-playwright-js/node_modules/.bin/playwright",
+      "test",
+      "--ui"
+    ],
+    "configFile": "/Users/amedelian/Downloads/qauto-playwright-js/playwright.config.js",
+    "rootDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/auth\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "login-tests",
+        "name": "login-tests",
+        "testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/logInPositiveTests\\.spec\\.js/",
+          "/logInNegativeTests\\.spec\\.js/",
+          "/registrationPositiveTests\\.spec\\.js/",
+          "/registrationNegativeTests\\.spec\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/amedelian/Downloads/qauto-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/amedelian/Downloads/qauto-playwright-js/tests",
+        "testIgnore": [
+          "/logInPositiveTests\\.spec\\.js/",
+          "/logInNegativeTests\\.spec\\.js/",
+          "/registrationPositiveTests\\.spec\\.js/",
+          "/registrationNegativeTests\\.spec\\.js/"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ],
+      [
+        "list",
+        {
+          "printSteps": true
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3160,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-02T13:34:46.599Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/auth.setup.js-authenticate-setup/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "logInNegativeTests.spec.js",
+      "file": "logInNegativeTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "LogIn negative tests",
+          "file": "logInNegativeTests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User is not logedIn with invalid creadentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5364,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:46.609Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/logInNegativeTests-LogIn-n-1beb6-n-with-invalid-creadentials-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6baff5ca99dd20ebbb34-fc17e596c954461c633f",
+              "file": "logInNegativeTests.spec.js",
+              "line": 14,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "logInPositiveTests.spec.js",
+      "file": "logInPositiveTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "LogIn positive tests",
+          "file": "logInPositiveTests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User is logedIn with valid creadentials*",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3100,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:46.620Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/logInPositiveTests-LogIn-p-be96b-In-with-valid-creadentials--login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9c98a6665ff6eb8925a2-400a71b9275fe9e50198",
+              "file": "logInPositiveTests.spec.js",
+              "line": 14,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "registrationNegativeTests.spec.js",
+      "file": "registrationNegativeTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Registration negative tests",
+          "file": "registrationNegativeTests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Invalid First Name is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2078,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:46.603Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--f7d82-valid-First-Name-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-f2426f48c02626123465",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 19,
+              "column": 2
+            },
+            {
+              "title": "Null First Name is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2213,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:46.595Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--54ffc--Null-First-Name-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-a2a009e85db9a1f5372b",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 25,
+              "column": 2
+            },
+            {
+              "title": "Invalid Last Name is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2198,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:49.143Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--ae368-nvalid-Last-Name-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-e29e15438dfa8380bb90",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 30,
+              "column": 2
+            },
+            {
+              "title": "Null Last Name is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 1384,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:49.246Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--f999e-s-Null-Last-Name-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-767e7251330a272bf57f",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 36,
+              "column": 2
+            },
+            {
+              "title": "Invalid Email is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1483,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:50.195Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--1ab2e-ts-Invalid-Email-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-ba68233d6a2430b9b5d2",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 41,
+              "column": 2
+            },
+            {
+              "title": "Null Email is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1500,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:50.427Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--d4ecf-tests-Null-Email-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-779e6ee703de6c024fa9",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 46,
+              "column": 2
+            },
+            {
+              "title": "Invalid Password is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2554,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:50.735Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--83f94-Invalid-Password-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-c0502816e6888a694b34",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 51,
+              "column": 2
+            },
+            {
+              "title": "Null Password is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2058,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:51.464Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--93acc-ts-Null-Password-is-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-cbc29c41a6c6cf1cb825",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 60,
+              "column": 2
+            },
+            {
+              "title": "Invalid Password is re-entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1679,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:51.768Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--018aa-alid-Password-is-re-entered-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-478b1a41a939df61322f",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 65,
+              "column": 2
+            },
+            {
+              "title": "Confirm Password validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1598,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:52.115Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--be056-Confirm-Password-validation-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-d30a6ba489c041fc0adf",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 74,
+              "column": 2
+            },
+            {
+              "title": "Registration button is disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1516,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:52.441Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationNegativeTests--ad162-stration-button-is-disabled-login-tests/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "69f2c16fd8aec8ca0c74-ad10152dacc5aa41fa79",
+              "file": "registrationNegativeTests.spec.js",
+              "line": 80,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "registrationPositiveTests.spec.js",
+      "file": "registrationPositiveTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Registration positive tests",
+          "file": "registrationPositiveTests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User is registered sucessfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "login-tests",
+                  "projectName": "login-tests",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 12251,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://qauto.forstudy.space/\u001b[7mpanel/garage\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://qauto.forstudy.space/\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × unexpected value \"https://qauto.forstudy.space/\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://qauto.forstudy.space/\u001b[7mpanel/garage\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://qauto.forstudy.space/\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × unexpected value \"https://qauto.forstudy.space/\"\u001b[22m\n\n    at /Users/amedelian/Downloads/qauto-playwright-js/tests/registrationPositiveTests.spec.js:24:22",
+                        "location": {
+                          "file": "/Users/amedelian/Downloads/qauto-playwright-js/tests/registrationPositiveTests.spec.js",
+                          "column": 22,
+                          "line": 24
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m \t\t\u001b[36mawait\u001b[39m registrationForm\u001b[33m.\u001b[39mrepeatPasswordField\u001b[33m.\u001b[39mfill(credentials\u001b[33m.\u001b[39muserPassword)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m \t\t\u001b[36mawait\u001b[39m registrationForm\u001b[33m.\u001b[39mregisterButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m \t\t\u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m`/`\u001b[39m \u001b[33m+\u001b[39m \u001b[32m`panel/garage`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t\t                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m \t})\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/amedelian/Downloads/qauto-playwright-js/tests/registrationPositiveTests.spec.js",
+                            "column": 22,
+                            "line": 24
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://qauto.forstudy.space/\u001b[7mpanel/garage\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://qauto.forstudy.space/\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × unexpected value \"https://qauto.forstudy.space/\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 22 |\u001b[39m \t\t\u001b[36mawait\u001b[39m registrationForm\u001b[33m.\u001b[39mrepeatPasswordField\u001b[33m.\u001b[39mfill(credentials\u001b[33m.\u001b[39muserPassword)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m \t\t\u001b[36mawait\u001b[39m registrationForm\u001b[33m.\u001b[39mregisterButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m \t\t\u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m`/`\u001b[39m \u001b[33m+\u001b[39m \u001b[32m`panel/garage`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t\t                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m \t})\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/amedelian/Downloads/qauto-playwright-js/tests/registrationPositiveTests.spec.js:24:22\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:34:53.445Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationPositiveTests--b4ff9-r-is-registered-sucessfully-login-tests/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationPositiveTests--b4ff9-r-is-registered-sucessfully-login-tests/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/registrationPositiveTests--b4ff9-r-is-registered-sucessfully-login-tests/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/amedelian/Downloads/qauto-playwright-js/tests/registrationPositiveTests.spec.js",
+                        "column": 22,
+                        "line": 24
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4e8bd67520839a3c518b-b3b379738b481291761b",
+              "file": "registrationPositiveTests.spec.js",
+              "line": 14,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "addCarPositiveTests.spec.js",
+      "file": "addCarPositiveTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Add car and fuel positive tests",
+          "file": "addCarPositiveTests.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Car is added",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1432,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.065Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/addCarPositiveTests-Add-ca-77df6-positive-tests-Car-is-added-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "07770341e8be7c749452-b59d20bf9e42298e4251",
+              "file": "addCarPositiveTests.spec.js",
+              "line": 7,
+              "column": 2
+            },
+            {
+              "title": "Fuel expense is added",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3559,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.067Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/addCarPositiveTests-Add-ca-d03ef-tests-Fuel-expense-is-added-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "07770341e8be7c749452-e7b8860102c383342287",
+              "file": "addCarPositiveTests.spec.js",
+              "line": 11,
+              "column": 2
+            },
+            {
+              "title": "Delete all cars",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 7099,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.067Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/addCarPositiveTests-Add-ca-fd485-itive-tests-Delete-all-cars-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "07770341e8be7c749452-746b1336ab3f6cb8c2a0",
+              "file": "addCarPositiveTests.spec.js",
+              "line": 19,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api/addCarTestsAPI.spec.js",
+      "file": "api/addCarTestsAPI.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API -- Add car positive and negative tests",
+          "file": "api/addCarTestsAPI.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Car is added API test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 249,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.057Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-addCarTestsAPI-API-----6ba3f-tests-Car-is-added-API-test-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d4f069a0acc3092a2dd7-0a6a3cb9dff1cf846473",
+              "file": "api/addCarTestsAPI.spec.js",
+              "line": 4,
+              "column": 2
+            },
+            {
+              "title": "Add Car - Mileage is null API test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 211,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.060Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-addCarTestsAPI-API-----c9f76----Mileage-is-null-API-test-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d4f069a0acc3092a2dd7-3eff4a9d5e3969d1c3a7",
+              "file": "api/addCarTestsAPI.spec.js",
+              "line": 26,
+              "column": 2
+            },
+            {
+              "title": "Add Car - Mileage > 999999 API Test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 57,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.298Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-addCarTestsAPI-API-----75093-r---Mileage-999999-API-Test-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d4f069a0acc3092a2dd7-7885fdd9a854965018db",
+              "file": "api/addCarTestsAPI.spec.js",
+              "line": 37,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api/profileTestAPI.spec.js",
+      "file": "api/profileTestAPI.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API -- Profile page",
+          "file": "api/profileTestAPI.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User Profile is modified",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 899,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T13:35:06.327Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/amedelian/Downloads/qauto-playwright-js/test-results/api-profileTestAPI-API-----bc61f-ge-User-Profile-is-modified-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d68de25d6a2c5ac3d635-d8a335d430da73180a1c",
+              "file": "api/profileTestAPI.spec.js",
+              "line": 4,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-02T13:34:46.172Z",
+    "duration": 27272.770000000004,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
 }
