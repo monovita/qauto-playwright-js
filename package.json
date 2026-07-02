@@ -17,11 +17,16 @@
   "scripts": {
     "prepare": "husky",
     "eslint": "npx eslint --fix .",
-    "prettier": "npx prettier . --write"
+    "prettier": "npx prettier . --write",
+    "pw:run:prod": "ENVIRONMENT=prod npx playwright test",
+    "pw:run:staging": "ENVIRONMENT=staging npx playwright test",
+    "pw:open:prod": "ENVIRONMENT=prod npx playwright test --ui",
+    "pw:open:staging": "ENVIRONMENT=staging npx playwright test --ui"
   },
   "dependencies": {
     "axios": "^1.18.1",
-    "chalk": "^5.6.2"
+    "chalk": "^5.6.2",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
