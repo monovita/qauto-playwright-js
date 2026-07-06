@@ -31,7 +31,8 @@ test.describe('API -- Add car positive and negative tests', () => {
 			},
 		});
 		expect(newCar.status()).toBe(400);
-		expect(newCar.statusText()).toContain('Mileage cost required');
+		const body = await newCar.json();
+		expect(body.message).toContain('Mileage is required');
 	});
 
 	test('Add Car - Mileage > 999999 API Test', async ({ request }) => {
@@ -43,6 +44,7 @@ test.describe('API -- Add car positive and negative tests', () => {
 			},
 		});
 		expect(newCar.status()).toBe(400);
-		expect(newCar.statusText()).toContain('Mileage has to be from 0 to 999999');
+		const body = await newCar.json();
+		expect(body.message).toContain('Mileage has to be from 0 to 999999');
 	});
 });
